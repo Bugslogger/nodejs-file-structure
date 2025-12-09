@@ -10,7 +10,6 @@ const bodyParser = require("body-parser");
 const cookieSession = require("cookie-session");
 const logger = require("morgan");
 const fileUpload = require("express-fileupload");
-const path = require("path");
 
 const {
   SERVER_NAME,

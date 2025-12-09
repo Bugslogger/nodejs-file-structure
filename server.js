@@ -1,13 +1,13 @@
 require("dotenv").config(); // always keep this line at top else it will throw error
 require("./utils/load.events/load.process.events")();
-const { Server } = require("socket.io");
+// const { Server } = require("socket.io");
 const http = require("http");
 
 const app = require("./app");
 // const db = require("./models/db.connect");
 
 const server = http.createServer(app);
-const io = new Server(server, { cors: { origin: "*" } });
+// const io = new Server(server, { cors: { origin: "*" } });
 
 // db.connection
 //   .sync()
@@ -24,7 +24,7 @@ const io = new Server(server, { cors: { origin: "*" } });
 //     );
 //   });
 
-require("./utils/load.events/socket")(io);
+// require("./utils/load.events/socket")(io);
 
 server.listen(process.env.PORT || 4000, () => {
   console.log(`Node Environment: ${process.env.NODE_ENV}.`);
